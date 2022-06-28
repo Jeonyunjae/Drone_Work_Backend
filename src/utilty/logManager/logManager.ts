@@ -19,6 +19,10 @@ export const logManager = new (class logManager {
     Logger(LEVEL.INFO, msg);
   }
 
+  InfoToJson(msg: any) {
+    Logger(LEVEL.INFO, JSON.stringify(msg));
+  }
+
   Prisma(msg: string) {
     Logger(LEVEL.PRISMA, msg);
   }
