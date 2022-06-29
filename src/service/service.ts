@@ -1,10 +1,11 @@
-import SearchAPI_Naver from "./search/naver/NaverSearchAPI";
+import NaverAPI from "./search/naver/NaverAPI.controller";
+import SearchAPI_Naver from "./search/naver/NaverAPI.controller";
 
 class Service {
-    SearchAPI_Naver: SearchAPI_Naver = null;
+  NaverAPI: NaverAPI = null;
 
   constructor() {
-    this.SearchAPI_Naver = new SearchAPI_Naver(process.env.NAVER_CLIENT_ID, process.env.NAVER_CLIENT_SECRET);
+    this.NaverAPI = new NaverAPI(process.env.NAVER_CLIENT_ID, process.env.NAVER_CLIENT_SECRET);
   }
 }
 
